@@ -19,6 +19,15 @@ function newNonPlayableCharacter(x, y) {
         }
         element.style.left = x + 'px'
         element.style.bottom = y + 'px'
+
+        //console.log(pc.element.style.left)
+        if (element.x < pc.element.x + 50 &&
+            element.x + 50 > pc.element.x &&
+            element.y < pc.element.y + 75 &&
+            71 +element.y > pc.element.y) {
+                removePlayerOnCollision()
+            }
+
     }
 
     setInterval(moveCharacter, 1)
